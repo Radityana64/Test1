@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Ini adalah tempat belajar</p>
+    <!-- <p>silakan masukan angka yang ingin anda jumlahkan</p>
+    <input type="number" id="bilangan1" value="" />
+    <input type="number" id="bilangan2" value="" />
+    <button id="hitung" onclick="hitung()">Hitung</button>
+    <p id="result">hasilnya adalah <span id="hasil"></span></p> -->
+    <div>ini adalah tempatnya</div>
+    <button id="start">munculkan hati</button>
+    <pre class="" id="heart"></pre>
+
+    <!-- ...existing code... -->
+    <div style="margin-bottom: 20px">
+      Fibonacci Generator: Generate n terms in the Fibonacci sequence.
+    </div>
+    <div>
+      <input
+        id="input-fibo"
+        type="text"
+        placeholder="Masukkan jumlah angka Fibonacci"
+      />
+      <div>
+        <button id="fibonaci">Hasil</button>
+      </div>
+      <p>Angka fibonaci</p>
+      <p class="fibona" id="fibona"></p>
+    </div>
+    <hr />
+    <div>Count Vowels: Count the number of vowels in a given sentence.</div>
+    <div>
+      <input
+        type="text"
+        ,
+        id="vowels"
+        ,
+        placeholder="masukan kata atau kalimat anda"
+      />
+      <button id="btn-vowels">Cari</button>
+      <pre id="output-vowel"></pre>
+    </div>
+    <hr style="margin-bottom: 10px" />
+    <div>
+      Custom Sort: Sort a list without using the built-in sort function.
+      <div>
+        <input
+          type="text"
+          ,
+          id="simple-sort"
+          ,
+          placeholder="masukan angkanya"
+        />
+        <button id="btnss">cari</button>
+        <div id="output-simple-sort"></div>
+      </div>
+    </div>
+    <hr style="margin-bottom: 10px" />
+    <div>
+      Word Frequency: Count how many times each word appears in a sentence.
+    </div>
+    <div>
+      <input
+        type="text"
+        id="word-input"
+        placeholder="Masukkan kalimat di sini"
+      />
+      <button id="word-button">Hitung</button>
+      <pre id="word-output"></pre>
+    </div>
+    <hr style="margin-bottom: 10px" />
+    <div>Grade Calculator: Input scores and calculate average and grade.</div>
+    <div>
+      <div>
+        <label for="scores">Masukkan skor (pisahkan dengan koma):</label><br />
+        <input type="text" id="scores" placeholder="contoh: 80, 90, 70" />
+        <button onclick="hitungGrade()">Hitung Grade</button>
+      </div>
+      <pre id="output-grade"></pre>
+    </div>
+    <hr style="margin-bottom: 10px" />
+    <div>List Duplicate Remover: Remove duplicates from a list.</div>
+    <div>
+      <input id="duplicate-input" placeholder="Contoh: 1;2,3;2;1" />
+      <button onclick="removeDuplicates()">Remove Duplicates</button>
+      <div id="duplicate-output"></div>
+    </div>
+    <hr style="margin-bottom: 10px" />
+
+    <div style="margin-bottom: 20px; text-transform: uppercase">
+      🟠 Level 3: Dictionaries, File I/O, and Simple Projects<br />Focus: Handle
+      data and basic file operations.
+    </div>
+
+    <div>
+      Contact Book: Save name & number in a dictionary and search by name.
+    </div>
+    <div>
+      <h3>Contact Book</h3>
+      <input type="text" id="name" placeholder="Name" />
+      <input type="text" id="number" placeholder="Phone Number" />
+      <button onclick="addContact()">Add Contact</button>
+    </div>
+    <input type="text" id="searchName" placeholder="Search Name" />
+    <button onclick="searchContact()">Search</button>
+
+    <p id="result"></p>
+
+    <hr style="margin-bottom: 10px" />
+
+    <div style="margin-bottom: 20px">
+      🔵 Level 4: OOP, Error Handling, Modules, APIs<br />Focus: Understand
+      object-oriented programming and real-world modules.
+    </div>
+    <div>
+      Bank Account Class: Create a class with deposit, withdraw, and balance
+      methods.
+    </div>
+    <!-- <div id="account-section" style="display: none"> -->
+    <h2>Bank Account</h2>
+
+    <label>Account Owner:</label>
+    <input type="text" id="owner" placeholder="Enter name" />
+
+    <button onclick="createAccount()">Create Account</button>
+
+    <div id="account-section" style="display: none">
+      <label>Deposit Amount:</label>
+      <input type="number" id="depositAmount" />
+      <button onclick="deposit()">Deposit</button>
+
+      <label>Withdraw Amount:</label>
+      <input type="number" id="withdrawAmount" />
+      <button onclick="withdraw()">Withdraw</button>
+
+      <button onclick="checkBalance()">Check Balance</button>
+
+      <p id="message"></p>
+    </div>
+    <!-- </div> -->
+
+    <hr style="margin-bottom: 20px" />
+    <div>Timer App: A countdown timer using time module.</div>
+    <div style="margin-bottom: 40px">
+      <h2>⏳ Countdown Timer</h2>
+
+      <label>Minutes:</label>
+      <input type="number" id="minutesInput" min="0" value="0" />
+      <label>Seconds:</label>
+      <input type="number" id="secondsInput" min="0" max="59" value="0" />
+
+      <div style="margin-top: 10px">
+        <button onclick="startTimer()">▶️ Start</button>
+        <button onclick="stopTimer()">⏸️ Stop</button>
+        <button onclick="restartTimer()">🔄 Restart</button>
+      </div>
+
+      <div id="timerDisplay">00:00</div>
+    </div>
+
+    <h2>Calculator Sederhana</h2>
+    <div id="calc">
+      <label>First Number:</label>
+      <input type="text" id="fnumber" />
+
+      <div class="operator-buttons">
+        <button class="operator-button" onclick="selectOperator('+')">+</button>
+        <button class="operator-button" onclick="selectOperator('-')">−</button>
+        <button class="operator-button" onclick="selectOperator('*')">×</button>
+        <button class="operator-button" onclick="selectOperator('/')">÷</button>
+      </div>
+
+      <label>Second Number:</label>
+      <input type="text" id="snumber" />
+
+      <button id="btnc">Result</button>
+      <h3 id="result2">Result:</h3>
+    </div>
+
+    <script src="latihan.js"></script>
+  </body>
+</html>
